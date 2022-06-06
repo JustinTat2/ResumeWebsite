@@ -1,58 +1,97 @@
-h1,
-h2,
-p,
-a,
-li {
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set font family, text color, and BG color for entire page. */
+body {
   font-family: sans-serif;
   color: #444;
+  background-color: #373737ff;
 }
 
+/* Center header, overwrite BG color, and add padding for the header. */
 .main-header {
   text-align: center;
+  background-color: #0ff;
+  padding: 20px;
 }
 
-.dates-employer-location {
-  font-size: 14px;
-  font-style: italic;
-  line-height: 10px;
+/* Add a margin under these elements in the header. */
+.main-header h1,
+.main-header p {
+  margin-bottom: 5px;
 }
 
-.resume-body {
-  margin-top: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 30px;
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
-}
-
-.article-text {
-  margin-left: 10px;
-}
-
-.footer {
-  text-align: center;
-}
-
-a:link {
+/* Styling hyperlinks */
+.main-header a:link,
+a:visited {
   color: black;
   text-decoration: none;
 }
 
-a:visited {
-  color: black;
-}
-
-a:hover {
+/* When link is hovered, bolden and underline the hyperlink. */
+.main-header a:hover,
+a:active {
   font-weight: bold;
   text-decoration: underline solid black;
 }
 
-a:active {
-  color: black;
+/* Center the article in the page, make it 1300 pixels wide, and set margins of
+20px at the top and bottom and automatically calculate margins for left and right. */
+.resume-content {
+  background-color: white;
+  width: 1300px;
+  margin: 20px auto;
 }
 
-body {
-  background-color: #0ff;
+/* For all text in the article class, add a margin of 20px to the left and right. */
+.resume-content h2,
+p,
+li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Overwrite the margin-left and margin-right for the list items. */
+.resume-content li {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/* Pad the h2 element with the text "Experience". */
+.experience {
+  padding-top: 15px;
+}
+
+/* Pad the li element with the text "SQL". */
+.sql {
+  padding-bottom: 15px;
+}
+
+/* Add a margin to the bottom of every li and p element. */
+.resume-content li,
+p {
+  margin-bottom: 5px;
+}
+
+/* Add a margin to the bottom of every h2 element. */
+.resume-content h2 {
+  margin-bottom: 15px;
+}
+
+/* Overwrite the margin-bottom of li last children. */
+.resume-content li:last-child {
+  margin-bottom: 15px;
+}
+
+/* Overwrite margin for a specific paragraph in the "Education" section */
+.brief {
+  margin-bottom: 15px;
+}
+
+/* Change font size to 14px. */
+.dates-employer-location {
+  font-size: 14px;
 }
